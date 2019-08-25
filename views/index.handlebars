@@ -1,0 +1,41 @@
+{{#each erros}}
+    <section class="alert alert-success">{{texto}}</section>
+{{/each}}
+
+<section class="row">
+    <article class="jumbotron">
+        <section class="jumbotron-heading">
+            <h1 class="text-center">
+                <i class="fab fa-node color-green display-1"></i>
+                <hr/>
+                <br/>Boas vindas ao blog do <strong class="color-green">Node.JS</strong> realizado por fans!
+                <a href="/usuarios/registro"><button class="btn btn-success mt-2">Crie uma conta agora mesmo! </button></a>
+            </h1>
+        </section>
+    </article>
+    <br/>
+    <section>
+
+    
+    <h1><strong>Postagens: </strong></h1>
+        <br/>
+        {{#each posts}}
+            <section class="card">
+                <header class="card-header">
+                    <h3 class="text-center"><strong>{{Titulo}}</strong></h3>
+                    <h5>Descrição: {{descricao}} </h5>
+                    <h4>Categoria: <strong>{{categoria.nome}}</strong></h4>
+                </header>
+                <section class="card-body">
+                    <p>{{conteudo}}</p> <a href="/postagens/{{Slug}}"><button class="btn btn-outline-primary">saiba mais... </button></a>
+                </section>
+                <footer class="card-footer">
+                    <small>{{Data_emissao}}</small>
+                </footer>
+            </section>
+            <br/>
+            {{else}}
+            <h4>Nenhuma postagem inserida</h4>
+        {{/each}}
+    </section>
+</section>

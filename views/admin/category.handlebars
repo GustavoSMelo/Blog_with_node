@@ -1,0 +1,36 @@
+<h1 class="Display-1">Lista de categorias: </h1>
+<a href="/admin/categorias/add">
+    <button class="btn btn-primary" type="button">Adicionar</button>
+</a>
+<hr/>
+<section class="row">
+    {{#each posts}}
+        <section class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-2">
+            <section class="card">
+                <section class="card-body text-justify">
+                    <h2 class="display-4">Nome: </h3>
+                    <h3>{{nome}}</h3>
+                    <hr/>
+                    <h2 class="display-4"> Slug: </h2>
+                    <h3>{{slug}}</h3>
+                    <small>Data de emissão: {{data}}</small>
+                    <br/>
+                    <a href="/admin/categorias/edit/{{_id}}">
+                        <button class="btn btn-outline-success"><i class="fas fa-pencil-alt"></i> Editar!</button>
+                    </a>
+                    <br/>
+                    <form action="/admin/categoria/deleted" method="POST" class="mt-2">
+                        <input type="hidden" name="id" value="{{_id}}"/>
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-times-circle"></i>
+                            Deletar
+                        </button>
+                    </form>
+                </section>
+            </section>
+        </section>
+
+        {{else}}
+        <h1 class="display-1">Nenhum categoria encontrada! </h1>
+    {{/each}}
+</section>

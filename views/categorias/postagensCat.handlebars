@@ -1,0 +1,22 @@
+<section>
+    {{#each posts}}
+        <article class="card">
+            <header class="card-header">
+                Nome: {{nome}}
+                descrição: {{descricao}}
+            </header>
+            <section class="card-body">
+                <p>{{conteudo}}</p>
+            </section>
+            <footer class="card-footer">
+                <small>
+                    Categoria: {{categoria}}
+                    Data: {{Data_emissao}}
+                </small>
+                <a href="/postagens/{{Slug}}"><button class="btn btn-outline-primary">Saiba mais... </button></a>
+            </footer>
+        </article>
+        {{else}}
+            <h1 class="display-1">Sem postagens com essa categoria</h1>
+    {{/each}}
+</section>

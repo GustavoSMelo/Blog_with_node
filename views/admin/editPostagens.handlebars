@@ -1,0 +1,31 @@
+<form method="POST" action="/admin/postagens/edited">
+    <h3 class="text-center"><strong> Atualização de postagem </strong></h3>
+    <input type="hidden" name="id" value="{{posts._id}}">
+    <label class="mt-2">Titulo: </label>
+    <input type="text" class="form-control" name="titulo" placeholder="Atual: {{posts.Titulo}}" required="required"/>
+
+    <br/>
+    <label class="mt-2">Slug: </label>
+    <input type="text" class="form-control" name="slug" placeholder="Atual: {{posts.Slug}}" required="required"/>
+
+    <br/>
+    <label class="mt-2">Descrição: </label>
+    <input type="text" class="form-control" name="descricao" placeholder="Atual: {{posts.descricao}}" required="required"/>
+    
+    <BR/>
+    <label class="mt-2">Conteudo: </label>
+    <textarea class="form-control" name="conteudo" placeholder="Atual: {{posts.conteudo}} " required="required"></textarea>
+    
+    <br/>
+    <label>Categoria</label>
+
+    <select class="form-control" required="required">
+        <option value="{{posts.categoria}}">{{posts.categoria}}</option>
+    </select>
+
+    <button class="btn btn-success mt-3">
+        <i class="fas fa-paper-plane"></i>
+        Editar postagem
+    </button>
+
+</form>

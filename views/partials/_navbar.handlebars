@@ -1,0 +1,21 @@
+<header class="nav navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="nav navbar-brand margin-left-icon" href="/"><i class="fab fa-node-js"></i> Blog NodeJS</a>
+    <button class="navbar-toggler ml-auto" type="button" data-target="#menuLink" data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <nav class="nav collapse navbar-collapse ml-auto" id="menuLink">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item margin-left-icon"><a class="nav-link" href="/"><i class="fas fa-home"></i> Home </a></li>
+            <li class="nav-item margin-left-icon"><a class="nav-link" href="/categorias"><i class="fas fa-cubes"></i> Categorias </a></li>
+
+            {{#if user}}
+                    <li class="nav-item margin-left-icon"><a class="nav-link" href="#"><i class="fas fa-user"></i> Boas-vindas {{user.nome_user}}</a></li>
+                    <li class="nav-item margin-left icon"><a class="nav-link" href="/usuarios/logout"><i class="fas fa-power-off"></i> Logout</a></li>
+                {{else}}
+                    <li class="nav-item margin-left-icon"><a class="nav-link" href="/usuarios/login"><i class="fas fa-user"></i> Login </a></li>
+                    <li class="nav-item margin-left-icon"><a class="nav-link" href="/usuarios/registro"><i class="fas fa-paste"></i> Registro </a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>

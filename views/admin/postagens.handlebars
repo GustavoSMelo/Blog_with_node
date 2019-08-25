@@ -1,0 +1,23 @@
+<h4>Lista de postagens</h4>
+<br/>
+<a href="/admin/postagens/add"><button class="btn btn-primary"><i class="fas fa-plus-square"></i> Adicionar postagem</button></a>
+<hr/>
+<section class="row">
+    {{#each posts}}
+        <section class="card">
+            <header class="card-header">
+                <h3 class="text-center"><strong>{{Titulo}}</strong></h3>
+                <h5>Descrição: <br/><{{descricao}}</h5>
+                <h4>Categoria: <strong>{{categoria.nome}}</strong></h4>
+            </header>
+            <section class="card-body">
+                <p>{{conteudo}}</p>
+            </section>
+            <footer class="card-footer">
+                <a href="/admin/postagens/editar/{{_id}}"><button class="btn btn-outline-primary"><i class="fas fa-pencil-alt"></i> Editar</button></a>
+                <a href="/admin/postagens/deleted/{{_id}}"><button class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Excluir</button></a>
+            </footer>
+        </section>
+        
+    {{/each}}
+</section>

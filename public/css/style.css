@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.margin-left-icon{
+    margin-left: 15px;
+}
+
+.color-green{
+    color: rgb(56, 216, 35);
+}
+
+.footer-config{
+    color: #fff;
+    padding: 25px;
+}

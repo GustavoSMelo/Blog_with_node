@@ -1,0 +1,13 @@
+
+<form class="form" action="/admin/categorias/edited" method="POST">
+    <input type="hidden" name="id" value="{{posts._id}}"/>
+
+    <label><h2>Nome:</h2> <small>atual: {{posts.nome}}</small></label>
+    <input type="text" class="form-control" name="nomeC" placeholder="insira o nome aqui... " required="required" value="{{posts.nome}}"/>
+
+    <label><h2>Slug:</h2> <small>atual: {{posts.slug}}</small></label>
+    <input type="text" class="form-control" name="slugC" placeholder="insira o slug aqui... " required="required" value="{{posts.slug}}"/>
+
+    <br/>
+    <a href="/admin/categorias/edited"><button class="btn btn-outline-primary">Editar categoria</button></a>
+</form>

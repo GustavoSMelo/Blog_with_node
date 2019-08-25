@@ -1,0 +1,13 @@
+<section class="row">
+    <article class="jumbotron text-center">
+        {{#each posts}}
+            <h1>{{Titulo}}</h1>
+            <strong>{{descricao}}</strong>
+            <hr/>
+            <p>
+                {{conteudo}}
+            </p>
+            <small>{{Data_emissao}}</small>
+        {{/each}}
+    </article>  
+</section>

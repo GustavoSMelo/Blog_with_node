@@ -1,0 +1,35 @@
+<form method="POST" action="/admin/postagens/add/created">
+    <h3 class="text-center"><strong> Registro de postagem </strong></h3>
+    <label class="mt-2">Titulo: </label>
+    <input type="text" class="form-control" name="titulo" placeholder="Insira o titulo da postagem aqui... " required="required"/>
+
+    <br/>
+    <label class="mt-2">Slug: </label>
+    <input type="text" class="form-control" name="slug" placeholder="Insira o slug da postagem aqui... " required="required"/>
+
+    <br/>
+    <label class="mt-2">Descrição: </label>
+    <input type="text" class="form-control" name="descricao" placeholder="Insira a descrição da postagem aqui... " required="required"/>
+    
+    <BR/>
+    <label class="mt-2">Conteudo: </label>
+    <textarea class="form-control" name="conteudo" placeholder="Insira o conteudo da postagem aqui... " required="required"></textarea>
+    
+    <br/>
+    <label>Categoria</label>
+
+    <select class="form-control" name="categoria">
+        {{#each categoria}}
+            <option value="{{_id}}"> {{nome}}</option>
+
+            {{else}}
+                <option>Nenhuma categoria registrada</option>
+        {{/each}}
+    </select>
+
+    <button class="btn btn-success mt-3">
+        <i class="fas fa-paper-plane"></i>
+            Enviar postagem
+    </button>
+
+</form>

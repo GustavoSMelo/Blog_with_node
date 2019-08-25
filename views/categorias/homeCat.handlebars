@@ -1,0 +1,14 @@
+
+<h1 class="text-center">Categorias cadastradas! </h1>
+<br/>
+<article class="card">
+    <section class="card-body">
+        {{#each posts}}
+            <a href="/categorias/{{slug}}"><strong>Nome: <h2>{{nome}}</h2></strong></a>
+            <br/>
+            <small>Slug: <h4>{{slug}}</h4></small>
+            <br/>
+            <hr/>
+        {{/each}}
+    </section>
+</article>
