@@ -13,7 +13,7 @@ router.get('/', itAdmin,(req, res) =>{
 });
 
 router.get('/posts', (req, res) =>{
-    res.render(`${__dirname}/../views/admin/posts`);
+    res.render(`${__dirname}/../views/admin/posts`, {title: 'main page for posts'});
 });
 
 
