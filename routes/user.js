@@ -49,7 +49,7 @@ router.post('/registro/created', (req, res) =>{
 });
 
 router.get('/login', (req, res) =>{
-    res.render(`${__dirname}/../views/users/login`);
+    res.render(`${__dirname}/../views/users/login`, {title: 'Formulario de login'});
 });
 
 router.post('/login', (req, res, next) =>{
